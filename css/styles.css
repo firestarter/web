@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
 
-h3, h4 {
+h1, h3, h4 {
     margin: 0 0 8px 0;
 }
 
-h3, h4, a, p, code {
+h1, h3, h4, a, p, code {
     font-family: "Karla";
 }
 
-h3, h4, a, p {
+h1, h3, h4, a, p {
     color: white;
 }
 
-h3 {
+h1, h3 {
     font-weight: 700;
     font-size: 1.75em;
 }
