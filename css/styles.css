@@ -46,6 +46,9 @@ body {
 }
 
 .heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 0.5em;
   margin-right: auto;
   color: var(--nizz-color);
@@ -134,4 +137,10 @@ body {
 
 .repeating-before li:nth-child(4n)::before {
   content: "🔥 ";
+}
+
+#logo {
+  padding-right: 10px;
+  width: 32px;
+  height: 32px;
 }
