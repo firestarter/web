@@ -46,12 +46,16 @@ body {
 }
 
 .heading {
-  display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
   margin-right: auto;
+  font-size: 1.9em;
+  font-weight: 700;
   color: var(--nizz-color);
+  background: linear-gradient(to right, #FF4621 0%, #FF9B4F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .main-text {
@@ -65,13 +69,17 @@ body {
   color: #f4f4f4;
 }
 
+.nav-wrapper {
+  margin-bottom: 2em;
+}
+
 .navigation {
   margin: 2em 0;
 }
 
 .navigation a {
   background-color: #1f2630;
-  padding: 0.3em 0.7em;
+  padding: 0.35em 0.8em !important;
   border-radius: 0.3em;
   font-weight: 700;
   text-decoration: none;
@@ -94,7 +102,6 @@ body {
   background-color: #1f2630;
   padding: 0.3em 0.7em;
   border-radius: 0.3em;
-  font-weight: 700;
   text-decoration: none;
   color: #fed7aa;
   margin-right: 0.3em;
@@ -110,6 +117,7 @@ body {
 
 .copyright {
   color: #525252;
+  text-align: center;
 }
 
 .repeating-before {
@@ -132,7 +140,7 @@ body {
 }
 
 .repeating-before li:nth-child(3n)::before {
-  content: "⚜️ ";
+  content: "💸 ";
 }
 
 .repeating-before li:nth-child(4n)::before {
