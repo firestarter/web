@@ -19,36 +19,55 @@
 <body>
   <div class="content">
     <h1 class="heading"><img id="logo" src="img/logo/sticker.png" alt="firestarter logo">firestarter</h1>
-    <h3 class="sub-text"> A simple, community-centric Minecraft SMP!</h3>
+    <h3 class="sub-text"> A simple, community-centric Minecraft SMP server!</h3>
     <br />
 
     <div class="main-text">
       <ul class="repeating-before">
-        <li>A community-driven SMP that was founded in August of 2019, aiming to create a fun, chill, and
+        <li>A community SMP that was founded in August of 2019, aiming to create a fun, cozy, and
           relaxing place to play Minecraft!
         </li>
-        <li><strong>Simplicity</strong> is central focus! Our simple rules prohibit griefing and protect
-          your builds from disaster.
+        <li><strong>Simplicity</strong> is our central focus! Our simple <a href="https://firestartermc.com/guide">rules</a>
+          prohibit griefing and protect your builds from disaster.
         </li>
         <li>Our economy is player-driven- players can create their own shops and warps, auction off items at
           their own prices, and trade with other players.
         </li>
-        <li>We're currently running Minecraft 1.20, Trails & Tales! Come join us at
-          <code>firestartermc.com</code>.
+        <li>We have a gigantic map, with lots of space for everybody to build and explore! Our 
+          <strong>80,000 x 80,000</strong> block map is interconnected by a full library of player warps!
+        </li>
+        <li>We stay up to date! Come join us at
+          <code>firestartermc.com</code> with Minecraft 1.20: The Trails & Tales Update.
         </li>
       </ul>
     </div>
+    <br />
     
     <div class="nav-wrapper">
       <div class="navigation">
-        <a href="https://store.firestartermc.com" target="_blank">Store</a>
+        <a href="https://firestartermc.com/guide" target="_blank">Guide</a>
         <a href="https://vote.firestartermc.com" target="_blank">Vote</a>
-        <a href="https://discord.gg/yzj9HrF" target="_blank">Discord</a>
+        <a href="https://store.firestartermc.com" target="_blank">Store</a>
+        <a href="https://discord.gg/yzj9HrF" target="_blank" class="discord-button">Discord</a>
       </div>
     </div>
 
-    <p class="copyright">Firestarter © 2019-2023<br />We are not affiliated with Mojang AB.</p>
+    <p class="current-player-count">_ playing right now! 🫶🏻</p>
+    <p class="copyright">firestarter © 2019-2023<br />We are not affiliated with Mojang AB.</p>
   </div>
+
+  <!-- some fun statistics 🌿 -->
+  <script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+  <script>
+    MinecraftAPI.getServerStatus('mc.firestartermc.com', (err, status) => {
+        if (err) {
+          return document.querySelector('.current-player-count').innerHTML = 'ten gazillion playing right now! 🤯';
+        }
+
+        var playerCount = status.players.now
+        document.querySelector('.current-player-count').innerHTML = (playerCount == 0 ? `Nobody playing right now. 🥲` : `${status.players.now} playing right now! 🫶🏻`)
+    });
+  </script>
 </body>
 
 </html>

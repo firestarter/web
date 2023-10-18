@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&display=swap');
 
 :root {
   --nizz-color: #ff9040;
-  --bg-color: #0e1217;
+  --bg-color: #131110;
   --text-color: #d3d3d3;
 }
 
 * {
-  font-family: "Karla", sans-serif;
+  font-family: "Lexend", sans-serif;
 }
 
 h1,
@@ -27,12 +27,17 @@ code {
   color: var(--nizz-color);
 }
 
+strong {
+  font-weight: 500;
+}
+
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0e1217;
-  min-height: 90vh;
+  background-color: var(--bg-color);
+  height: 100vh;
+  margin: 0;
   animation: fade 2s;
 }
 
@@ -66,6 +71,7 @@ body {
   margin-top: 0;
   margin-right: auto;
   color: #f4f4f4;
+  font-weight: 500;
 }
 
 .navigation {
@@ -73,41 +79,31 @@ body {
 }
 
 .navigation a {
-  background-color: #1f2630;
-  padding: 0.35em 0.8em !important;
+  font-weight: 500;
+  background-color: #24211F;
+  padding: 0.35em 0.8em;
   border-radius: 0.3em;
-  font-weight: 700;
   text-decoration: none;
   color: #fed7aa;
   margin-right: 0.3em;
   box-shadow: 0 2px 15px 0 rgb(0 0 0 / 2%);
+
   transition: background-color 0.3s ease;
 }
 
 .navigation a:hover {
-  background-color: #181e26;
+  background-color: #2C2926;
   color: var(--nizz-color);
 }
 
-.navigation {
-  margin: 2em 0;
+.discord-button {
+  background-color: #6775AC !important;
+  color: white !important;
 }
 
-.navigation a {
-  background-color: #1f2630;
-  padding: 0.3em 0.7em;
-  border-radius: 0.3em;
-  text-decoration: none;
-  color: #fed7aa;
-  margin-right: 0.3em;
-  box-shadow: 0 2px 15px 0 rgb(0 0 0 / 2%);
-
-  transition: background-color 0.3s ease;
-}
-
-.navigation a:hover {
-  background-color: #181e26;
-  color: #fdba74;
+.discord-button:hover {
+  background-color: #7483BF !important;
+  color: #fed7aa !important;
 }
 
 .copyright {
@@ -126,11 +122,11 @@ body {
   text-indent: -1.7rem;
 }
 
-.repeating-before li:nth-child(3n + 1)::before {
+.repeating-before li:nth-child(1n)::before {
   content: "🪶 ";
 }
 
-.repeating-before li:nth-child(3n + 2)::before {
+.repeating-before li:nth-child(2n)::before {
   content: "✨ ";
 }
 
@@ -139,6 +135,10 @@ body {
 }
 
 .repeating-before li:nth-child(4n)::before {
+  content: "🗺️ ";
+}
+
+.repeating-before li:nth-child(5n)::before {
   content: "🔥 ";
 }
 
